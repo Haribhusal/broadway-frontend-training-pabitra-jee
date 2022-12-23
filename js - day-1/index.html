@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .emptyDiv {
+            background-color: red;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        #redBox {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+    <!-- <script></script> -->
+</head>
+
+<body>
+    <div id="redBox">
+        <h1>This is title</h1>
+    </div>
+    <button id="hideRedBox">Hide Redbox</button>
+    <!-- <h1 class="title">Hello</h1> -->
+
+    <!-- <p>I am a paragraph</p>
+
+    <div class="emptyDiv">
+
+    </div> -->
+
+    <div class="imagewrapper">
+        <img src="sad.png" alt="">
+        <button class="happy">Make Me Happy</button>
+        <button class="sad">Make Me Sad</button>
+    </div>
+
+
+    <script>
+        var _hideRedBox = document.getElementById('hideRedBox')
+
+        _hideRedBox.addEventListener('click', function () {
+            var _redBox = document.querySelector('#redBox');
+            _redBox.style.display = 'none'
+        })
+
+        var myButtonForHappy = document.querySelector('.happy');
+        var myButtonForSad = document.querySelector('.sad');
+        myButtonForHappy.addEventListener('click', function () {
+            var myImage = document.querySelector('.imagewrapper img');
+            myImage.src = 'happy.png';
+        })
+
+        myButtonForSad.addEventListener('click', function () {
+            var myImage = document.querySelector('.imagewrapper img');
+            myImage.src = 'sad.png';
+        })
+
+        var myEmptyDiv = document.querySelector('.emptyDiv');
+        myEmptyDiv.innerText = "Hello";
+
+        var myTitle = document.querySelector('.title');
+        myTitle.textContent = "I am changed from JS"
+    </script>
+</body>
+
+</html>
